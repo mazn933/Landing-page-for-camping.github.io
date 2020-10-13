@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>Camping</title>
+
+    <style>
+        body{margin:0;
+            box-sizing: border-box;
+            font-family: 'Merriweather', serif;
+            font-size: 1.125rem;
+            color:#071e3d;
+            }
+
+        /***Header section***/
+
+        header{text-align: center;
+              }
+
+
+       #logo{font-size:2rem;
+             text-decoration:none;
+             color: #086972;}
+
+      .fire{width:50px;
+            height: 50px;}
+
+       ul{
+           list-style:none;
+         }
+
+       li{margin-top: 1em;}
+
+       ul a{text-decoration: none;
+            color:#107a8b;
+            font-size: .9rem;
+            margin-right: 2em;
+            position: relative;
+
+           }
+
+       .link::after{
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        left: 0%;
+        border-bottom: 2px solid #88bef5;
+        transition: all 500ms;
+
+    }
+
+       .link:hover::after{
+        width: 100%;
+        }
+
+       .active{border-left: 3px solid #cb3b3b;
+              border-radius:10px;
+              padding-left: 3px;}
+
+       .account{margin-top: 2em;
+                
+            }
+
+      .account a{text-decoration: none;
+             padding:.5em 1em;
+             color: white;
+             border-radius: 5px;
+             
+             
+             }
+
+      .sign{background-color:#1e6262;
+            font-size:1rem;
+ 
+        }
+      .login{background-color:#4b89ac;
+            font-size:1rem;}
+
+       /****main section****/
+       main{
+        background-image: url('c.jpg');
+        background-size: cover;
+        background-position:right;
+        padding-bottom: 12em ;
+        color:black;
+        }
+
+
+        .intro{margin-top:1em;}
+
+        span{color:#1a936f;}
+
+        .book{text-decoration: none;
+             color: white;
+             padding:.5em 1em;
+             background-color:#ea5455;
+             display: block;
+             max-width:50%;
+             text-align: center;
+             margin:0 auto;
+             border-radius: 2px;
+             margin-top: 2em;
+             opacity: .9;
+             box-shadow: 1px 1px 1px .1px black;
+             }
+
+        .book:hover{opacity: 1;}
+
+        .explore{margin-top: 2em;}
+
+
+        .follow{color: #eac100;
+               font-size:2rem;
+               font-weight: 900;
+               }
+
+        .socialmedia{
+            text-align: center;
+            margin-top: 6em;
+        }
+
+        .socialmedia a{text-decoration: none;
+            margin-left: 1em;
+                      }
+
+        .fab{padding:.5em .5em;
+             border-radius:5px;
+             color:white;
+             background-color:#1e6262;
+             font-size: 1.5rem;
+             margin-right:1em;
+             transition: all 250ms;}
+
+        .fab:hover{transform: scale(1.2);}
+
+        @media(min-width:650px){
+            main{display: grid;
+            grid-template-columns:minmax(1em,10%) minmax(100px,450px) minmax(1em,1fr);
+            }
+
+            main > *{grid-column: 2/3;}
+
+        }
+
+        @media(min-width:750px){
+            header{display:grid;
+                   grid-template-columns:minmax(1em,10%) minmax(100px,200px) minmax(100px,650px) minmax(100px,500px);
+                   align-items: baseline;}
+
+            .logo{grid-column:2/3;
+            justify-self: left;
+            }
+
+            .fire{grid-column: 1/2;
+                justify-self: right;
+                align-self: center;
+                }
+
+            nav{grid-column:3/4;
+                justify-self: center;
+                margin-right: 2em;}
+
+            ul{
+                 display: flex;            
+                 }
+
+            .account{grid-column: 4/5;}
+
+
+             
+
+        }
+
+        @media(min-width:950px){
+            ul{font-size: 1rem;}
+
+            .account a{margin-left: 1em;}
+
+            .sign:hover{color:#f4fa9c;}
+
+            .login:hover{color:#f4fa9c;}
+            
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+   <header>
+       
+        <img src="fire.jpg" alt="" class="fire">
+       <h1 class="logo"><a href="#" id="logo">Camping</a>
+        
+        </h1>
+        
+       <nav>
+           <ul>
+            <li><a href="#" class="link active">HOME</a></li>
+            <li><a href="#" class="link">INFO</a></li>
+            <li><a href="#" class="link">PRICING</a></li>
+            <li><a href="#" class="link">CONTACT</a></li>
+           </ul>
+       </nav>
+
+       <div class="account">
+           <a href="#" class="sign">sign up</a>
+           <a href="#" class="login">log in</a>
+       </div>
+
+   </header>
+
+   <main class="main">
+       <h1 class="explore">Explore <span>Nature</span> with us</h1>
+
+       <p class="intro">
+        Sed ut perspiciatis unde omnis iste natus error
+        sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+         eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae 
+         vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit 
+         aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos 
+         qui ratione voluptatem sequi nesciunt.
+        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+       </p>
+
+       <a href="" class="book">BOOK A TRIP</a>
+
+       <div class="socialmedia">
+           <h2 class="follow">Follow us</h2>
+           <a href="#" class="social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-snapchat-ghost"></i>
+           </a>
+       
+       </div>
+
+   </main>
+
+   <script>
+
+       const links=document.querySelectorAll(".link");
+       const active=document.querySelector('.active')
+
+       for(let i=0;i<links.length;i++){
+           links[i].addEventListener('click',function(e){
+               for(let i=0;i<links.length;i++){
+                   links[i].classList.remove('active')
+               }
+               this.classList.add('active');
+           
+       })}
+   </script>
+    
+</body>
+</html>
